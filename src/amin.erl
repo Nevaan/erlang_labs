@@ -1,7 +1,7 @@
 -module(amin).
 -export([amin/1]).
 
-amin({[A|B]})->
+amin([A|B])->
 	amin({A,B});
 amin({Min,[]}) -> 
 	Min;
@@ -10,6 +10,6 @@ amin({Min,[A|B]})
 		amin({Min,B});
 amin({Min,[A|B]}) ->
 	amin({A,B});
-amin({[]}) -> io:fwrite("Pusta lista").
+amin([]) -> io:fwrite("Pusta lista").
 
 		
