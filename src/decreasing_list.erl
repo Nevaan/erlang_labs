@@ -10,3 +10,4 @@ dec(N)
 dec(N) 
 	when N < 1 ->
 		[].
+
