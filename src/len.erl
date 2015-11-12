@@ -1,7 +1,6 @@
 -module(len).
 -export([len/1]).
 
-len([A|B]) ->
+len([_|B]) ->
 	1 + len(B);
-len([A]) -> 1;
 len([]) -> 0.

@@ -8,7 +8,7 @@ amin({Min,[]}) ->
 amin({Min,[A|B]}) 
 	when Min < A ->
 		amin({Min,B});
-amin({Min,[A|B]}) ->
+amin({_,[A|B]}) ->
 	amin({A,B});
 amin([]) -> io:fwrite("Pusta lista").
 

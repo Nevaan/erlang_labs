@@ -11,6 +11,6 @@ tmin_max({{Min,Max},[A|B]})
 tmin_max({{Min,Max},[A|B]})
   	when A > Max ->
 		tmin_max({{Min,A},B});
-tmin_max({{Min,Max},[A|B]}) ->
+tmin_max({{Min,Max},[_|B]}) ->
 		tmin_max({{Min,Max},B});
 tmin_max([]) -> io:fwrite("Pusta lista").

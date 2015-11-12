@@ -18,6 +18,6 @@ my_elem({Elem, N})
 my_elem({Elem, N})
   	when N > 1 ->
 		[Elem] ++ my_elem({Elem, N-1});
-my_elem({Elem, N})
+my_elem({_, N})
   	when N < 1 ->
 		[].

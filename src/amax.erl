@@ -8,7 +8,7 @@ amax({Max,[]}) ->
 amax({Max,[A|B]}) 
 	when Max < A ->
 		amax({A,B});
-amax({Max,[A|B]}) ->
+amax({Max,[_|B]}) ->
 	amax({Max,B});
 amax([]) -> io:fwrite("Pusta lista").
 
